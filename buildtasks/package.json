@@ -2,7 +2,7 @@
   "name": "build-buttons",
   "displayName": "Build Buttons",
   "description": "One compact status bar button per project. Click the name to run the default build task, click the arrow to expand all task buttons.",
-  "version": "0.5.8",
+  "version": "0.5.11",
   "publisher": "eos1d3",
   "license": "MIT",
   "icon": "icon.png",

@@ -25,10 +25,13 @@ cat > "$STAGE/extension.vsixmanifest" <<EOF
     <DisplayName>Build Buttons</DisplayName>
     <Description xml:space="preserve">One compact status bar button per project. Click the name to run the default build task, click the arrow to expand all task buttons.</Description>
     <Categories>Other</Categories>
+    <GalleryFlags>Public</GalleryFlags>
     <Properties>
       <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.75.0" />
       <Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="ui,workspace" />
     </Properties>
+    <License>extension/LICENSE.txt</License>
+    <Icon>extension/icon.png</Icon>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
@@ -36,6 +39,9 @@ cat > "$STAGE/extension.vsixmanifest" <<EOF
   <Dependencies/>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/icon.png" Addressable="true" />
   </Assets>
 </PackageManifest>
 EOF
