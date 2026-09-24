@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "button": {
+    "label": "G230C",
+    "icon": "$(chip)",
+    "default": "Build Debug"
+  },
+  "tasks": [
+    {
+      "label": "Build Debug",
+      "detail": "Compile debug build",
+      "args": ["building", "G230C", "debug"],
+      "macos":   { "command": "echo" },
+      "windows": { "command": "echo" },
+      "linux":   { "command": "echo" }
+    },
+    {
+      "label": "Build Release",
+      "detail": "Compile release build",
+      "command": "echo",
+      "args": ["building", "G230C", "release"]
+    },
+    {
+      "label": "Clear",
+      "detail": "Remove build outputs",
+      "command": "echo",
+      "args": ["cleaning", "G230C"]
+    },
+    {
+      "label": "Flash",
+      "detail": "Flash firmware",
+      "command": "echo",
+      "args": ["flashing", "G230C"]
+    }
+  ]
+}

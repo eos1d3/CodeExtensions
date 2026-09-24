@@ -1,0 +1,37 @@
+{
+  "name": "build-buttons",
+  "displayName": "Build Buttons",
+  "description": "One compact status bar button per project. Click the name to run the default build task, click the arrow to expand all task buttons.",
+  "version": "0.5.7",
+  "publisher": "eos1d3",
+  "license": "MIT",
+  "private": true,
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Build Tasks",
+      "properties": {
+        "buildTasks.filePath": {
+          "type": "string",
+          "default": ".vscode/buildtasks.json",
+          "markdownDescription": "Workspace-relative path of the per-project button definition file (`buildtasks.json`)."
+        },
+        "buildTasks.autoCollapseSeconds": {
+          "type": "number",
+          "default": 10,
+          "description": "Seconds before an expanded row of buttons collapses by itself. 0 disables auto-collapse."
+        }
+      }
+    }
+  }
+}
