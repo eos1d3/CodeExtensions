@@ -13,6 +13,9 @@ STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
 mkdir -p "$STAGE/extension"
 cp "$SRC/package.json" "$SRC/extension.js" "$SRC/jsonc.js" "$SRC/README.md" "$SRC/icon.png" "$STAGE/extension/"
+if [ -f "$SRC/LICENSE" ]; then
+  cp "$SRC/LICENSE" "$STAGE/extension/LICENSE.txt"
+fi
 
 cat > "$STAGE/extension.vsixmanifest" <<EOF
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,6 +48,7 @@ cat > "$STAGE/[Content_Types].xml" <<'EOF'
   <Default Extension="js" ContentType="application/javascript"/>
   <Default Extension="md" ContentType="text/markdown"/>
   <Default Extension="png" ContentType="image/png"/>
+  <Default Extension="txt" ContentType="text/plain"/>
 </Types>
 EOF
 

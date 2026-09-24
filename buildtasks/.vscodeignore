@@ -1,0 +1,8 @@
+test/**
+sample-project/**
+*.sh
+make-icon.py
+icon.svg
+*.vsix
+.DS_Store
+.vscodeignore

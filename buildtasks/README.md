@@ -34,23 +34,19 @@ defines its own buttons in its own file, so it never conflicts with
 
 ## Install
 
-Open the Extensions panel, search for **Build Buttons**, click Install.
-(You're already on the Marketplace page — the button works too.)
-
-Or from the terminal:
+Download the `.vsix` from
+[Releases](https://github.com/eos1d3/CodeExtensions/releases), then:
 
 ```sh
-code --install-extension eos1d3.build-buttons
+code --install-extension eos1d3.build-buttons-0.5.8.vsix
+# or
+cursor --install-extension eos1d3.build-buttons-0.5.8.vsix
 ```
 
-### Cursor
-
-Cursor uses the Open VSX registry, where this extension is not (yet)
-published — install the packaged VSIX there:
+To rebuild locally:
 
 ```sh
 ./make-vsix.sh
-cursor --install-extension eos1d3.build-buttons-<version>.vsix
 ```
 
 ### Development install

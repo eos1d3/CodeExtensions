@@ -2,11 +2,17 @@
   "name": "build-buttons",
   "displayName": "Build Buttons",
   "description": "One compact status bar button per project. Click the name to run the default build task, click the arrow to expand all task buttons.",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "publisher": "eos1d3",
   "license": "MIT",
-  "private": true,
   "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eos1d3/CodeExtensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eos1d3/CodeExtensions/issues"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
